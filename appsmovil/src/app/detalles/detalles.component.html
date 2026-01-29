@@ -1,0 +1,18 @@
+<h1>Detalles de las aplicaciones de {{desarrollador}}</h1><br>
+<input type="text" [(ngModel)]="filtroDescargas" placeholder="Filtrar por descargas..."><br><br>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Descargas</th>
+        <th>Coste</th>
+        <th>Borrado</th>
+    </tr>
+    <tr *ngFor="let aplicacion of aplicacionesFiltradas">
+        <td>{{aplicacion.id}}</td>
+        <td>{{aplicacion.nombre}}</td>
+        <td [class.azul]="aplicacion.descargas > 10000">{{aplicacion.descargas}}</td>
+        <td>{{aplicacion.gratuita ? 'Gratuita' : 'De pago'}}</td>
+        <td><button [routerLink]="['/borrado', aplicacion.id]">Aceptar</button></td>
+    </tr>
+</table>
