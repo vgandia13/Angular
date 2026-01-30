@@ -1,0 +1,9 @@
+<label>Nombre:</label>
+<input type="text" [(ngModel)]="nuevoEmpleado.nombre"><br>
+<label>Edad:</label>
+<input type="number" [(ngModel)]="nuevoEmpleado.edad">
+<label>Activo:</label>
+<input type="checkbox" id="activo" name="activo" [(ngModel)]="nuevoEmpleado.contratado">
+<button (click)="insertarNuevoEmpleado()">Insertar</button>
+
+<button routerLink="/inicio">Volver al inicio</button>

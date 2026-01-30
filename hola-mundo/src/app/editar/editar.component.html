@@ -1,0 +1,27 @@
+<h2>Editar Empleado</h2>
+
+<form *ngIf="empleado">
+    <div>
+        <label>ID:</label> {{ empleado.id }}
+    </div>
+
+    <div>
+        <label>Nombre:</label>
+        <input type="text" [(ngModel)]="empleado.nombre" name="nombre"/>
+    </div>
+
+    <div>
+        <label>Edad:</label>
+        <input type="number" [(ngModel)]="empleado.edad" name="edad"/>
+    </div>
+
+    <div>
+        <label>Contratado:</label>
+        <input type="checkbox" [(ngModel)]="empleado.contratado" name="contratado"/>
+    </div>
+
+    <div>
+        <button type="button" (click)="guardar()">Guardar</button>
+        <button type="button" (click)="cancelar()">Cancelar</button>
+    </div>
+</form>

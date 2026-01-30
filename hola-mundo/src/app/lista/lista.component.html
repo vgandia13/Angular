@@ -1,0 +1,24 @@
+<h2>Lista de empleados</h2>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Contratado</th>
+            <th>Accion</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let empleado of empleados | filterEmpleados:busqueda; let i = index">
+            <td>{{ empleado.id }}</td>
+            <td [ngClass]="{fondoAzul: i%2 == 0, fondoVerde: i%2 != 0}"> {{ empleado.nombre }}</td>
+            <td [style.color]="empleado.edad > 25 ? 'blue' : 'red'">{{ empleado.edad }}</td>
+            <td>{{ empleado.contratado ? 'Contratado' : 'En prácticas' }}</td>
+            <td>
+                <button [routerLink]="['/editar', empleado.id]" class="mr-2">Modificar</button>
+                <button (click)="borrar(empleado.id)" class="ml-2">Borrar</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
