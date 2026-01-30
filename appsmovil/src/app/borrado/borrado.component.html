@@ -1,5 +1,12 @@
 <div *ngIf="app; else cargando">
+    <h2>Id: {{app.id}}</h2>
+    <h2>Nombre: {{app.nombre}}</h2>
+    <h2>Descargas: {{app.descargas}}</h2>
+    <h2>Coste: {{app.gratuita ? 'Gratuita' : 'De Pago'}}</h2>
+    <br>
 
+    <button (click)="borrarAplicacion()">Borrar</button>
+    <button routerLink="/resumen">Cancelar </button>
 </div>
 
 <ng-template #cargando>
