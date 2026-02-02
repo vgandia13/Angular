@@ -1,0 +1,9 @@
+<div *ngIf="trayecto">
+  <h2>Id: {{trayecto.id}}</h2>
+  <h2>Salida: {{trayecto.salida}}</h2>
+  <h2>Llegada: {{trayecto.llegada}}</h2>
+  <h2>Km: {{trayecto.km}}</h2>
+  <h2>Trayecto de fin de semana: {{trayecto.finSemana ? 'Sí' : 'No'}}</h2>
+
+  <button routerLink="/datos">Volver</button>
+</div>
