@@ -1,0 +1,23 @@
+<div class="main-layout">
+  <header class="section-header">
+    <h2>Catálogo de Videojuegos</h2>
+    <p>Gestiona tu colección almacenada en la API externa.</p>
+  </header>
+
+  <main class="content">
+    <div class="row">
+      <div class="col">
+        <app-lista-juegos
+          [juegos]="lista"
+          (onSeleccion)="gestionarSeleccion($event)">
+        </app-lista-juegos>
+      </div>
+      <div class="col">
+        <app-detalle-juego
+          [juego]="juegoSeleccionado"
+          (onBorrar)="borrarJuego($event)">
+        </app-detalle-juego>
+      </div>
+    </div>
+  </main>
+</div>

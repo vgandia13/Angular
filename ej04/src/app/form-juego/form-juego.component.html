@@ -1,0 +1,38 @@
+<div class="form-container">
+  <h3>Añadir Nuevo Videojuego</h3>
+  <form [formGroup]="juegoForm" (ngSubmit)="enviar()">
+    <div class="field">
+      <label>Título:</label>
+      <input type="text" formControlName="titulo" placeholder="Ej: Elden Ring">
+    </div>
+
+    <div class="field">
+      <label>Género:</label>
+      <select title="Selecciona..." formControlName="genero">
+        <option value="">Selecciona...</option>
+        <option value="RPG">RPG</option>
+        <option value="Aventura">Aventura</option>
+        <option value="Acción">Acción</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label>Plataforma:</label>
+      <input type="text" formControlName="plataforma" placeholder="PC, PS5, Switch...">
+    </div>
+
+    <div class="field">
+      <label>Precio (€):</label>
+      <input placeholder="0.00" type="number" formControlName="precio">
+    </div>
+
+    <div class="field-check">
+      <input placeholder="Selecciona..." type="checkbox" formControlName="completado">
+      <label>¿Ya lo has terminado?</label>
+    </div>
+
+    <button type="submit" [disabled]="juegoForm.invalid" class="btn-save">
+      Guardar en Docker
+    </button>
+  </form>
+</div>

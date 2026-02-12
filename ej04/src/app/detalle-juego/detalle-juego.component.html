@@ -1,0 +1,19 @@
+<div class="detail-container">
+  <div *ngIf="juego; else noSelected" class="detail-card">
+    <h2>{{ juego.titulo }}</h2>
+    <div class="badge">{{ juego.genero }}</div>
+    <hr>
+    <p><strong>Plataforma:</strong> {{ juego.plataforma }}</p>
+    <p><strong>Precio:</strong> <span class="price">{{ juego.precio | currency:'EUR' }}</span></p>
+    <p><strong>Estado:</strong> {{ juego.completado | estadoJuego }}</p>
+    <hr>
+      <button (click)="solicitarBorrado()" class="btn-delete">
+      Eliminar Juego
+      </button>
+    </div>
+  <ng-template #noSelected>
+    <div class="empty-state">
+      <p>Selecciona un videojuego para ver sus detalles</p>
+    </div>
+  </ng-template>
+</div>

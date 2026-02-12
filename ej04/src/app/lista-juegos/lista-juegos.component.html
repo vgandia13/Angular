@@ -1,0 +1,12 @@
+<div class="game-list">
+  <h3>Catálogo Disponible</h3>
+  <div *ngFor="let j of juegos"
+       (click)="seleccionar(j)"
+       class="game-item">
+    <div class="game-info">
+      <span class="game-title">{{ j.titulo }}</span>
+      <span class="game-platform">{{ j.plataforma }}</span>
+    </div>
+    <span class="arrow">→</span>
+  </div>
+</div>

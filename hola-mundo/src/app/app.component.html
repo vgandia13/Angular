@@ -1,2 +1,10 @@
-<app-navbar></app-navbar>
-<router-outlet/>
+<nav class="main-nav">
+  <div class="brand">VideoGameDB</div>
+  <div class="links">
+    <a routerLink="/dashboard" class="nav-link">Inicio</a>
+  </div>
+</nav>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

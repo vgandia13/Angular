@@ -1,0 +1,39 @@
+.game-list {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.game-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 8px;
+  background: white;
+  border-left: 5px solid #6200ee;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.game-item:hover {
+  transform: translateX(5px);
+  background: #f0eaff;
+}
+
+.game-title {
+  font-weight: bold;
+  display: block;
+}
+
+.game-platform {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.arrow {
+  color: #6200ee;
+  font-weight: bold;
+}

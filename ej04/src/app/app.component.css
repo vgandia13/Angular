@@ -1,0 +1,26 @@
+.main-nav {
+  background: #6200ee;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.nav-link {
+  color: #ccc;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+}
+
+.active-link {
+  color: white;
+  border-bottom: 2px solid white;
+}
+
+.brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
