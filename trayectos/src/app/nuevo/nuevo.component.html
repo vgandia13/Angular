@@ -1,0 +1,15 @@
+
+<label>Salida</label>
+<input type="text" [(ngModel)]="nuevoTrayecto.salida" placeholder="..."><br>
+
+<label>Llegada</label>
+<input type="text" [(ngModel)]="nuevoTrayecto.llegada" placeholder="..."><br>
+
+<label>Km</label>
+<input type="number" [(ngModel)]="nuevoTrayecto.km" placeholder="0"><br>
+
+<label>¿Fin de semana?</label>
+<input type="checkbox" placeholder="..." [(ngModel)]="nuevoTrayecto.finSemana" name="activo" id="activo" [defaultValue]="false"><br>
+
+<button type="submit" (click)="insertarNuevoEmpleado()">Insertar</button>
+

@@ -1,0 +1,27 @@
+<h1>Itinerarios</h1><br><br>
+
+<label for="salida">Salida</label>
+<input type="text" [(ngModel)]="filtroSalida" placeholder="...">
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Salida</th>
+      <th>Llegada</th>
+      <th>Km</th>
+      <th>¿Fin de semana?</th>
+      <th>Acción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let trayecto of trayectosFiltrados; let i = index">
+      <td>{{trayecto.id}}</td>
+      <td>{{trayecto.salida}}</td>
+      <td>{{trayecto.llegada}}</td>
+      <td [class.azul]="trayecto.km > 300">{{trayecto.km}}</td>
+      <td>{{trayecto.finSemana ? 'si' : 'no'}}</td>
+      <td><button (click)="borrar(trayecto.id)" class="ml-2">{{textoBoton}}</button><button class="mr-2" [routerLink]="['/detalle', trayecto.id]">Más información</button></td>
+    </tr>
+  </tbody>
+</table>

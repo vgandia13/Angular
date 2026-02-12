@@ -1,0 +1,6 @@
+.navbar{
+  padding: 15px;
+  background-color: grey;
+  gap: 20px;
+  display: flex;
+}

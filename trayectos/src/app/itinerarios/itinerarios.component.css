@@ -1,0 +1,9 @@
+.azul{
+  color: blue;
+}
+
+.table tbody thead th td{
+  padding: 15px;
+  border-color: black;
+  border: 1px;
+}

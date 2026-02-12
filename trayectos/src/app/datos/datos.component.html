@@ -1,0 +1,12 @@
+
+<h1>Datos</h1><br>
+
+<label for="botonBorrar">Texto para boton para borrar:</label>
+<input type="text" [(ngModel)]="textoBoton" placeholder="?"><br>
+<label>Número de trayectos: {{numTrayectos}}</label>
+
+
+<app-itinerarios
+[textoBoton]="textoBoton"
+(enviarNumTrayectos)="actualizarNum($event)">
+</app-itinerarios>
